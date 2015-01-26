@@ -1,0 +1,13 @@
+class CustomObject
+	constructor() {}
+
+	void hello() {
+		print "Hello"
+	}
+
+class Test
+	main {
+		o = new CustomObject()
+		o.hello()
+		print "Done"
+	}

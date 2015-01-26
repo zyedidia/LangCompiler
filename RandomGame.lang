@@ -1,0 +1,39 @@
+class RandomGame {
+    main {
+        in = new Scanner(System.in)
+
+        guesses = 0
+
+		rand = new Random()
+        secretNumber = rand.nextInt((100 - 0) + 1) + 0
+        print "I'm thinking of a number between 1 and 100"
+		while (1) {
+            if (guesses == 8) {
+				print "You lose"
+                print "The secret number was " + new Integer(secretNumber)
+				System.exit(0)
+            }
+            
+            print "Take a guess"
+
+            guess = in.nextInt()
+
+            if (guess > secretNumber) {
+                print "Too high"
+                guesses = guesses + 1
+				print "You have " + Integer.toString(8 - guesses) + " guesses left"
+            }
+
+            if (guess < secretNumber) {
+                print "Too low"
+                guesses = guesses + 1
+				print "You have " + Integer.toString(8 - guesses) + " guesses left"
+            }
+
+            if (guess == secretNumber) {
+                print "You got it"
+				System.exit(0)
+            }
+		}
+    }
+}
