@@ -15,7 +15,7 @@ class CodeWriter extends LangBaseListener {
 	}
 
 	public void exitCompilationUnit(LangParser.CompilationUnitContext ctx) {
-		System.out.println("Close");
+		// System.out.println("Close");
 		// Close the writer when the end of file is reached
 		writer.close();
 	}
@@ -494,7 +494,6 @@ class CodeWriter extends LangBaseListener {
 		String[] paramTypes = paramTypesList.toArray(new String[paramTypesList.size()]);
 
 		LangMethod m = new LangMethod(className + "." + methodName, paramTypes);
-		System.out.println("Hello");
 		String returnType = m.returnType();
 		boolean isStatic = m.isStatic();
 

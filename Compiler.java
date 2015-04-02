@@ -18,13 +18,13 @@ class Compiler {
 		ParseTree tree = parser.compilationUnit();
 		// Run the MethodFieldResolver
 		ParseTreeWalker.DEFAULT.walk(new MethodFieldResolver(), tree);
-		System.out.println("Subroutine and field tables filled");
+		// System.out.println("Subroutine and field tables filled");
 		// Run the TypeChecker
 		ParseTreeWalker.DEFAULT.walk(new TypeChecker(), tree);
-		System.out.println("Type checker done");
+		// System.out.println("Type checker done");
 		// Run the CodeWriter
 		ParseTreeWalker.DEFAULT.walk(new CodeWriter(args[0], outputFile), tree);
-		System.out.println("Code generation done");
+		// System.out.println("Code generation done");
 
 		// This section tells the user which classes have been generated
 		String classes = "";

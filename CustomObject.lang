@@ -1,13 +1,15 @@
-class CustomObject
+class CustomObject {
 	constructor() {}
 
 	void hello() {
 		print "Hello"
 	}
+}
 
-class Test
+class Test {
 	main {
 		o = new CustomObject()
 		o.hello()
 		print "Done"
 	}
+}
